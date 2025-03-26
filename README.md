@@ -1,6 +1,6 @@
 # waybar-config
 
-Simple and clean waybar config + css that contains.
+Simple and clean waybar config + css that contains:
 1. Logo
 2. Clock 
 3. Workspaces
