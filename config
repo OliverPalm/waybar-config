@@ -2,66 +2,41 @@
 "layer": "top",
 "position": "top",
 "spacing": 0,
-"height": 16,
+"height": 25,
 
 "modules-left": ["custom/logo","clock"],
 "modules-center": ["hyprland/workspaces"],
-"modules-right": ["network", "battery"],
+"modules-right": ["cpu", "memory"],
 
 "clock": {
     "interval": 60,
     "tooltip": true,
-    "format": "{:%H.%M} ",
-},
-
-"battery": {
-    "bat": "BAT0",
-    "interval": 60,
-    "states": {
-        "warning": 30,
-        "critical": 15
-    },
-    "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""],
-    "max-length": 25
-},
-
-
-"network": {
-    "interface": "wlan0",
-    "format": "{ifname}",
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-    "format-disconnected": "", //An empty format will hide the module.
-    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ifname} ",
-    "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50
+    "format": "{:%Y-%m-%d %H.%M} ",
 },
 
 "hyprland/workspaces": {
   "format": "{icon}",
-  "on-click": "activate",
+  "sort-by-number": true,
   "format-icons": {
-    "1": "①",
-    "2": "②",
-    "3": "③",
-    "4": "④",
-    "5": "⑤",
-    "6": "⑥",
-    "7": "⑦",
-    "8": "⑧",
-    "9": "⑨",
-    "10": "⑩",
-    "active": "",
-    "default": ""
-  },
-  "sort-by-number": true
+  "active": "X"
+  }
 },
 
 "custom/logo": {
   "format": ""
-}
+},
+ "cpu": {
+        "interval": 15,
+        "format": " {}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "max-length": 10
+    }
+
+
 
 }
+
